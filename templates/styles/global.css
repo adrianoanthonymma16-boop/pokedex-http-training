@@ -1,0 +1,141 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+main ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    max-width: 1200px;
+}
+
+/* 🔥 CARDS COM COR DO TIPO */
+main ol li {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+    padding: 15px 20px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    width: calc(25% - 20px); /* 🔥 2 POR LINHA */
+    max-width: 420px;
+    box-sizing: border-box;
+    min-width: 280px;
+    transition: transform 0.3s ease;
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.loadMore {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+#loadMore {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* 🔥 CORES DOS CARDS (FUNDO DO LI) */
+.card-type-normal   { background-color: #A8A878; }
+.card-type-fighting { background-color: #C03028; }
+.card-type-flying   { background-color: #A890F0; }
+.card-type-poison   { background-color: #A040A0; }
+.card-type-ground   { background-color: #E0C068; color: #333; text-shadow: none; }
+.card-type-rock     { background-color: #B8A038; }
+.card-type-bug      { background-color: #A8B820; }
+.card-type-ghost    { background-color: #705898; }
+.card-type-steel    { background-color: #B8B8D0; color: #333; text-shadow: none; }
+.card-type-fire     { background-color: #F08030; }
+.card-type-water    { background-color: #6890F0; }
+.card-type-grass    { background-color: #78C850; }
+.card-type-electric { background-color: #F8D030; color: #333; text-shadow: none; }
+.card-type-psychic  { background-color: #F85888; }
+.card-type-ice      { background-color: #98D8D8; color: #333; text-shadow: none; }
+.card-type-dragon   { background-color: #7038F8; }
+.card-type-dark     { background-color: #705848; }
+.card-type-fairy    { background-color: #EE99AC; color: #333; text-shadow: none; }
+.card-type-unknown  { background-color: #68A090; }
+
+/* 🔥 HOVER DO CARD */
+main ol li:hover {
+    transform: scale(1.5);
+    transition: transform 0.3s ease;
+    z-index: 10;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+/* 🔥 HOVER DA IMAGEM */
+main ol li:hover img {
+    transform: scale(2.0) translateX(60px) translateY(-20px);
+    transition: transform 0.4s ease;
+    z-index: 10;
+    filter: drop-shadow(0 20px 15px rgba(0, 0, 0, 0.3));
+}
+
+/* 🔥 INFORMAÇÕES DO POKÉMON */
+.pokemon-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+h2 {
+    margin: 0;
+    font-size: 1.5em;
+    font-family: Arial, sans-serif;
+    text-transform: capitalize;
+}
+
+/* 🔥 TIPO (FUNDO BRANCO TRANSLÚCIDO) */
+.pokemon-type {
+    display: inline-block;
+    font-size: 0.9em;
+    font-family: Arial, sans-serif;
+    text-transform: capitalize;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding: 2px 14px;
+    align-self: flex-start;
+    background-color: rgba(255, 255, 255, 0.4); /* 🔥 ANTES ERA 0.85, AGORA 0.4 (50% MENOS) */
+    color: #ffffff;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* 🔥 IMAGEM */
+img {
+    width: 100px;
+    height: 80px;
+    object-fit: contain;
+    flex-shrink: 0;
+    order: 2;
+}
+
+
+/* 🔥 RESPONSIVO */
+@media (max-width: 900px) {
+    main ol li {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 600px) {
+    main ol li {
+        width: 100%;
+        max-width: 300px;
+    }
+}
