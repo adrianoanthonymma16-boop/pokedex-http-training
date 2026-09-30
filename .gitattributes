@@ -1,0 +1,6 @@
+# A linguagem principal deste repositorio e JavaScript; o CSS existe para
+# dar estilo aos componentes e nao para ser o assunto do projeto. Sem esta
+# linha, o GitHub contabiliza CSS por volume de bytes e elege CSS como
+# linguagem principal, o que classifica o repositorio errado na aba
+# Repositories do perfil.
+*.css linguist-detectable=false
